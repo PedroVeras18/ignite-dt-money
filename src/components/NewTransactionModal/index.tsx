@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import * as Dialog from '@radix-ui/react-dialog'
 import { Overlay, Content, CloseButton, TransactionType, TransactionTypeButton } from './styles'
 import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
@@ -5,8 +6,6 @@ import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
 import * as z from 'zod'
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from '@hookform/resolvers/zod'
-import { api } from '../../lib/axios';
-import { useContext } from 'react';
 import { TransactionsContext } from '../../contexts/TransactionsContext';
 
 const newTransactionFormSchema = z.object({
